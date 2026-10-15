@@ -1,3 +1,5 @@
+// Question: Find the sum of all elements of an array using recursion.
+
 #include <iostream>
 using namespace std;
 
