@@ -1,9 +1,11 @@
 // Question: Return all subsequences of a given string using recursion (e.g. "abc" -> "", "c", "b", "bc", "a", "ac", "ab", "abc").
+// Also print all subsequences directly using recursion (take/reject method), without storing them.
 
 #include <iostream>
 #include<math.h>
 using namespace std;
 
+// Approach 1: return all subsequences in an output array
 int subseq(string input, string *output){
    if(input.size()==0){
        output[0]="";
@@ -18,7 +20,17 @@ int subseq(string input, string *output){
     
 }
 
-
+// Approach 2: print all subsequences (take/reject method)
+void printSubseq(string input, string tillnow){
+   if(input.size()==0){
+      cout<<"["<<tillnow<<"]"<<endl;
+       return ;
+   }
+   
+   printSubseq(input.substr(1),tillnow + input[0]); //take
+   printSubseq(input.substr(1), tillnow);           //reject
+    
+}
 
 int main()
 {
@@ -29,9 +41,14 @@ int main()
    
    int size=subseq(input,output);
    
+   cout<<"Returned subsequences:"<<endl;
    for(int i=0;i<size;i++) //try with i<n
     cout<<output[i]<<endl;
    
+   cout<<"The following subsequence of string "<<input<<" is: "<<endl;
+   printSubseq(input,"");
+   
+   delete [] output;
 
     return 0;
 }
