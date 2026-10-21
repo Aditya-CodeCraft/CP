@@ -4,7 +4,7 @@
 #include<vector>
 using namespace std;
 
-//generate all possible valid parenthesis
+//generate all possible valid parenthesis  --- take/reject method with some constraint
 void valid_parenth(int opr,int clr , string tillnow ){
     if(opr==0 && clr==0){
         cout<<tillnow<<endl;
@@ -27,7 +27,7 @@ void valid_parenth(int opr,int clr , string tillnow ,vector<string>&v){
     if(opr>0)
         valid_parenth(opr-1,clr,tillnow+'(',v);
     
-    if(clr>0 && opr<clr) //opr<clr as i want open first  //dont give else if as we want all possible combo else if dene se yeh execute nhi hoga
+    if(clr>0 && opr<clr) //opr<clr as i want open first  //dont use else-if as we want all possible combo else-if dene se yeh execute nhi hoga
         valid_parenth(opr,clr-1,tillnow+')',v);    
 }
 
