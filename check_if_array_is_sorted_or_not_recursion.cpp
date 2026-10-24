@@ -7,7 +7,7 @@ bool is_sorted(int *arr , int s){
     if(s==0 || s==1)
         return true;
 
-    if(arr[0]>arr[1])
+    if(arr[0]>arr[1]) //vimp check always use checks on failing condition
         return false;
 
     return is_sorted(arr+1,s-1);
