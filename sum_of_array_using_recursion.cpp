@@ -14,8 +14,8 @@ int recur(int *p,int s){
 
 int main()
 {
-    int arr[]={10,20,30,40};
-    int size= sizeof(arr)/sizeof(arr[0]);
+    int arr[]={10,20,30,40}; //or use int *arr = new int[n] given n is taken as i/p
+    int size= sizeof(arr)/sizeof(arr[0]);  
     cout<<"sum is:"<<recur(arr,size);
     return 0;
 }
