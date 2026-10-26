@@ -1,4 +1,5 @@
 // Question: Given a string, print all its permutations using recursion (swap-based approach, e.g. "abc" -> abc, acb, bac, bca, cba, cab).
+// Note: This code works only for strings with unique characters. With duplicate characters (e.g. "aab") it prints repeated permutations, since the swap approach does not skip already-used characters.
 
 #include <iostream>
 #include <vector>
