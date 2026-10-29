@@ -5,7 +5,7 @@
 #include <vector>
 using namespace std;
 
- bool isSafe(int r, int c , int n , vector<vector<int>> board)
+ bool isSafe(int r, int c , int n , vector<vector<int>> &board) //pass by reference else whole board gets copied on every call
     {
         int cr=r; //copy row
         int cc=c; //copy column
@@ -42,7 +42,7 @@ using namespace std;
         
     }
 
-void solve(int col , int n , vector<vector<int>> board){
+void solve(int col , int n , vector<vector<int>> &board){ //pass by reference else whole board gets copied on every call
     if(col==n){
         for (int i = 0; i < n; i++)
         {
@@ -94,3 +94,7 @@ int main()
 
 // rows → number of rows (how many inner vectors)
 // vector<int>(cols, 0) → the template for each row; its length cols is what sets the column count
+
+// default value in the col template can be changed as per need, e.g.
+// vector<vector<char>> grid(rows, vector<char>(cols, '.'));
+// vector<vector<bool>> vis(rows, vector<bool>(cols, false));
