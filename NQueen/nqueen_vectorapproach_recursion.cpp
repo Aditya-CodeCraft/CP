@@ -1,5 +1,5 @@
 // 51. N-Queens >leetcode - vector approach
-// Same logic as nqueen_ArrayApproach_recursion.cpp, just changed int **board (array) to vector<vector<int>> board, so no new/delete needed
+// Same logic as NQueen/nqueen_ArrayApproach_recursion.cpp, just changed int **board (array) to vector<vector<int>> board, so no new/delete needed
 
 #include <iostream>
 #include <vector>
