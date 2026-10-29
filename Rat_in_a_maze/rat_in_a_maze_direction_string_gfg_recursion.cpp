@@ -20,12 +20,14 @@ void rat_in_a_maze(int a , int b , int n , int m , int **maze ,vector<vector<int
     if(isSafe(a+1,b,n,m,maze,visit)) //Down
     {
         visit[a][b]=1;
-        output.push_back('D');
-        rat_in_a_maze(a+1,b,n,m,maze,visit,output,ans_gfg);
+        output.push_back('D'); //string push only accepts a single character ('a'), not a full string literal ("abc"). 
+        rat_in_a_maze(a+1,b,n,m,maze,visit,output,ans_gfg); 
         output.pop_back();
         visit[a][b]=0;
     }
 
+
+    
     if(isSafe(a,b-1,n,m,maze,visit)) //Left
     {
         visit[a][b]=1;
