@@ -29,7 +29,7 @@ public:
         if(arr[i]<pq.top()) //mrko min chaiye toh maximum vale ko eliminate kro by checking this condition
         {
             pq.pop(); //logk
-            pq.push(arr[i]); //logk logk hoga kyuki mera heap k size ka h agr n elements le kr banate toh logn hota
+            pq.push(arr[i]); //logk logk hoga kyuki mera heap 'k' size ka h agr n elements le kr banate toh logn hota
         }
     } //  klogk+(n-k)2logk = O(nlogk)
     return pq.top();
