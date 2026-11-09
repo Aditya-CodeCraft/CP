@@ -10,7 +10,7 @@ using namespace std;
         int cr=r; //copy row
         int cc=c; //copy column
         
-        while(c>=0) //row fixed         <------------------- left straight move
+        while(c>=0) //row fixed         <------------------- left move straight
         {
             if(board[r][c]==1)
                 return false;
