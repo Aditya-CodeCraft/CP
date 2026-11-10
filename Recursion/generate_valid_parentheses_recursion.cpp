@@ -11,7 +11,7 @@ void valid_parenth(int opr,int clr , string tillnow ){
         return;
     }
     
-    if(opr>0)
+    if(opr>0) //opr= open ( remaining
         valid_parenth(opr-1,clr,tillnow+'(');
     
     if(clr>0 && opr<clr) //opr<clr as i want open first  //dont give else if as we want all possible combo else if dene se yeh execute nhi hoga
