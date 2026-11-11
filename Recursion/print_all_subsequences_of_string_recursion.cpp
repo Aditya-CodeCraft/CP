@@ -11,14 +11,14 @@ using namespace std;
 int subseq(string input, string *output){
    if(input.size()==0){
        output[0]="";
-       return 1; //empty string dala toh size 1 hogaya abhi
+       return 1; //empty string dala toh size 1 hogaya abhi 
    }
    
    int small_size=subseq(input.substr(1),output);
    for(int i=0;i<small_size;i++)
         output[i+small_size] = input[0]+output[i];
     
-    return 2*small_size;
+    return 2*small_size; //double the previous size
     
 }
 
