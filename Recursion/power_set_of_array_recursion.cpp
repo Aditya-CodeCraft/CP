@@ -26,7 +26,7 @@ void powset(int index, int s, int *arr , vector<vector<int>>&ans , vector<int>cu
 int main()
 {
     int n;
-    cin>>n;
+    cin>>n; //number size or length
     int *arr=new int[n];
     for(int i=0;i<n;i++)
         cin>>arr[i];
