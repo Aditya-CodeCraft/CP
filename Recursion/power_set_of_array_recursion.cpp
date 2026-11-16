@@ -1,5 +1,5 @@
 // Question: Given an array of n integers, print all its subsets (the power set) using recursion (e.g. [1,2] -> [], [2], [1], [1 2]).
-
+//backtracking
 #include <iostream>
 #include <vector>
 using namespace std;
