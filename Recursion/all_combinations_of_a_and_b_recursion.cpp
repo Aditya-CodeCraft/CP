@@ -1,5 +1,5 @@
 // Question: Given n, generate all strings made of exactly n 'a's and n 'b's using recursion (e.g. n=2 -> "aabb", "abab", "abba", "baab", "baba", "bbaa").
-
+// Code
 #include <iostream>
 #include<vector>
 using namespace std;
